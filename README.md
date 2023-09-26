@@ -40,22 +40,20 @@ node server.js
 ```
 We can see that a `csv` file is generated with the data contained in the table generated with `javascript` through an `async` function to consult the data.
 ## 2. Python - Selenium & BeatifulSoup4
-Para este caso vamos a extraer los datos de los productos de la pagina [Una Luka](https://unaluka.com "UnaLuka") primero inicializar el entorno virtual de python usaremos el siguiente comando:
-
+For this case we are going to extract the product data from the page [Una Luka](https://unaluka.com "UnaLuka"), first initialize the python virtual environment and use the following command:
 ```bash
 cd versionPython
 ```
-Seguido inicializamos el proyecto con los siguientes comandos:
+Next we initialize the project with the following commands:
 ```bash
 pipenv shell
-#Luego para instalar las dependencias del entorno virtual 
+#Then to install the virtual environment dependencies
 pipenv install --dev
 ```
-Ahora ejecutamos el archivo con extension **py**(`python`) con el comando:
+Now we execute the file with extension **py**(`python`) with the command:
 
 ```bash
 python main.py
 ```
-
-Podemos observar que se genera un archivo `csv` con los datos contenidos por la busqueda de cada producto .
+We can see that a `csv` file is generated with the data contained by the search for each product.
 

@@ -56,6 +56,5 @@ Ahora ejecutamos el archivo con extension **py**(`python`) con el comando:
 ```bash
 python main.py
 ```
-
 Podemos observar que se genera un archivo `csv` con los datos contenidos por la busqueda de cada producto .
 
