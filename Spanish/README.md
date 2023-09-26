@@ -1,6 +1,6 @@
 # WebScraping
-🇪🇸 [Spanish](./Spanish/README.md) 
-🇬🇧 [English](./README.md)
+🇪🇸 [Spanish](./README.md) 
+🇬🇧 [English](../README.md)
 
 ## Introduccion:
 Vamos a scrapear las siguientes paginas de dos formas distintas empleadno tanto `nodejs` y `python`:
