@@ -57,3 +57,4 @@ python main.py
 ```
 We can see that a `csv` file(**datos.csv**) is generated with the data contained by the search for each product.
 
+**Note**: To exit the `pipenv shell` virtual environment use the `exit` command in the terminal where the environment has been initialized.
