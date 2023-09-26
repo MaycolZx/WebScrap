@@ -38,7 +38,7 @@ Now we execute the file with extension **js**(`javascript`) with the command:
 ```bash
 node server.js
 ```
-We can see that a `csv` file is generated with the data contained in the table generated with `javascript` through an `async` function to consult the data.
+We can see that a `csv` file(**tabla.csv**) is generated with the data contained in the table generated with `javascript` through an `async` function to consult the data.
 ## 2. Python - Selenium & BeatifulSoup4
 For this case we are going to extract the product data from the page [Una Luka](https://unaluka.com "UnaLuka"), first initialize the python virtual environment and use the following command:
 ```bash
@@ -55,5 +55,5 @@ Now we execute the file with extension **py**(`python`) with the command:
 ```bash
 python main.py
 ```
-We can see that a `csv` file is generated with the data contained by the search for each product.
+We can see that a `csv` file(**datos.csv**) is generated with the data contained by the search for each product.
 
