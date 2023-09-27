@@ -41,14 +41,18 @@ node server.js
 We can see that a `csv` file(**tabla.csv**) is generated with the data contained in the table generated with `javascript` through an `async` function to consult the data.
 ## 2. Python - Selenium & BeatifulSoup4
 For this case we are going to extract the product data from the page [Una Luka](https://unaluka.com "UnaLuka"), first initialize the python virtual environment and use the following command:
+
 ```bash
 cd versionPython
 ```
-Next we initialize the project with the following commands:
+Next we are going to create and start the python virtual environment natively with the following command:
 ```bash
-pipenv shell
-#Then to install the virtual environment dependencies
-pipenv install --dev
+python -m venv scrapenv
+source scrapenv/bin/activate
+```
+Then to install the virtual environment dependencies.
+```bash
+pip install -r requirements
 ```
 Now we execute the file with extension **py**(`python`) with the command:
 
@@ -57,4 +61,4 @@ python main.py
 ```
 We can see that a `csv` file(**datos.csv**) is generated with the data contained by the search for each product.
 
-**Note**: To exit the `pipenv shell` virtual environment use the `exit` command in the terminal where the environment has been initialized.
+**Note**: To exit the `python venv` virtual environment use the `deactivate` command in the terminal where the environment has been initialized.

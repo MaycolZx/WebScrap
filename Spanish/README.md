@@ -45,11 +45,14 @@ Para este caso vamos a extraer los datos de los productos de la pagina [Una Luka
 ```bash
 cd versionPython
 ```
-Seguido inicializamos el proyecto con los siguientes comandos:
+Seguido vamos a crear e iniciar el entorno virtual de python de forma nativa con el siguiente comando:
 ```bash
-pipenv shell
-#Luego para instalar las dependencias del entorno virtual 
-pipenv install --dev
+python -m venv scrapenv
+source scrapenv/bin/activate
+```
+Luego para instalar las dependencias del entorno virtual. 
+```bash
+pip install -r requirements
 ```
 Ahora ejecutamos el archivo con extension **py**(`python`) con el comando:
 
@@ -58,4 +61,4 @@ python main.py
 ```
 Podemos observar que se genera un archivo `csv` (**datos.csv**) con los datos contenidos por la busqueda de cada producto .
 
-**Nota** : Para salir del entorno virtual de `pipenv shell` usar el comando `exit` en la terminal donde se haya inicializado el entorno.
+**Nota** : Para salir del entorno virtual de `python venv` usar el comando `deactivate` en la terminal donde se haya inicializado el entorno.
