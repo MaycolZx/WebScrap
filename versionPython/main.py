@@ -7,15 +7,16 @@ import csv
 URL_BASE = "https://unaluka.com/collections/ofertas?page="
 nextSignal = True
 numerPage = 1
-# Lista de valores
-values = [
-    ["Product-Vendor"],
-    ["Product-Name"],
-    ["Price-Deposit"],
-    ["Sale"],
-    ["Price-Credit-Card"],
-    ["Price-Compare"],
-]
+
+product_info = {
+        "Product-Vendor": [],
+        "Product-Name": [],
+        "Price-Deposit": [],
+        "Sale": [],
+        "Price-Credit-Card": [],
+        "Price-Compare": []
+    }
+
 while nextSignal:
     URL_FINAL = f"{URL_BASE}{numerPage}"
     r = requests.get(URL_FINAL)
@@ -46,11 +47,20 @@ while nextSignal:
         else:
             priceCompare = priceCompare.get_text(strip=True)
         index = [productVendor, nameProduct, precio, descuento, priceCard, priceCompare]
-        for i in range(6):
-            values[i].append(index[i])
-        # print(f"{productVendor.get_text(strip=True)}   {nameProduct.get_text(strip=True)}   {precio.get_text(strip=True)}   {descuento.get_text(strip=True)}   {priceCard.get_text(strip=True)}   {priceCompare}")
+        for k,v in zip(product_info.keys(),index):
+            product_info[k].append(v)
 
-with open("datos.csv", "w", newline="") as archivo_csv:
-    escritor_csv = csv.writer(archivo_csv)
-    for fila in values:
-        escritor_csv.writerow(fila)
+# Nombre del archivo CSV de salida
+csv_filename = "productos.csv"
+# Abre el archivo CSV en modo de escritura
+with open(csv_filename, mode='w', newline='') as csv_file:
+    # Crea un escritor CSV
+    csv_writer = csv.writer(csv_file)
+    # Escribe el encabezado (las claves del diccionario) en el archivo CSV
+    csv_writer.writerow(product_info.keys())
+    # Combina los valores de las listas en una lista de tuplas
+    data_rows = zip(*product_info.values())
+    # Escribe los datos en el archivo CSV
+    csv_writer.writerows(data_rows)
+
+print(f"Los datos se han guardado en '{csv_filename}'.")
